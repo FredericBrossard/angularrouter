@@ -1,0 +1,23 @@
+<div class="backrealisation">
+<div>
+  <img class="img" src="./assets/volley2.jpg" alt="volley2"/> 
+</div>
+<div> 
+<!--  <ul>
+    
+<li *ngFor= "let real of realService.dataRealisation" >
+  {{ real.name }} 
+ </li>
+</ul> -->
+<!-- ajout dans app.module de : import {MatListModule} from '@angular/material/list'; -->
+<!--  lien documentation Angular ici : https://material.angular.io/components/list/overview -->
+<mat-list>
+    <mat-list-item  *ngFor="let real of realService.dataRealisation">
+      <mat-icon matListIcon>touch_app</mat-icon>
+      <img matListAvatar src="{{real.image}}" alt="...">
+      <h3 matLine> {{real.name}} </h3>
+    </mat-list-item>
+  </mat-list>
+  
+</div>
+</div>
